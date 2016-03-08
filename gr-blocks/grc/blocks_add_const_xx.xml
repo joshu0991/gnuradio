@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!--
+##################################################
+#Add Const Block:  
+#    all types, 1 output, 1 input & const    
+################################################### 
+-->
+<block>
+        <name>Add Const</name>
+        <key>blocks_add_const_xx</key>
+        <import>from gnuradio import blocks</import>
+        <make>blocks.add_const_$(type.fcn)($const) </make>
+        <callback>set_k($const)</callback>
+        <param>
+                <name>IO Type</name>
+                <key>type</key>
+                <type>enum</type>
+                <option>
+                        <name>Complex</name>
+                        <key>complex</key>
+                        <opt>const_type:complex_vector</opt>
+                        <opt>fcn:cc</opt>
+                </option>
+                <option>
+                        <name>Float</name>
+                        <key>float</key>
+                        <opt>const_type:real_vector</opt>
+                        <opt>fcn:ff<opt/>
+                </option>                        
+                <option>
+                        <name>Int</name>
+                        <key>int</key>
+                        <opt>const_type:int_vector</opt>
+                        <opt>fcn:ii<opt/>
+                </option>                        
+                <option>
+                        <name>Short</name>
+                        <key>short</key>
+                        <opt>const_type:int_vector</opt>
+                        <opt>fcn:ss<opt/>
+                </option> 
+        </param>                       
+</block>
