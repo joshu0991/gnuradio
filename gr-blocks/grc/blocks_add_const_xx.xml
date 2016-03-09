@@ -6,7 +6,7 @@
 ################################################### 
 -->
 <block>
-        <name>Add Const</name>
+        <name>Add Const XX</name>
         <key>blocks_add_const_xx</key>
         <import>from gnuradio import blocks</import>
         <make>blocks.add_const_$(type.fcn)($const) </make>
@@ -40,4 +40,28 @@
                         <opt>fcn:ss<opt/>
                 </option> 
         </param>                       
+        <param>
+                <name>Constant</name>
+                <key>const</key>
+                <value>0</value>
+                <type>$type.const_type</type>
+        </param>
+        <param>
+                <name>Vec Length</name>
+                <key>vlen</key>
+                <value>1</value>
+                <type>int</type>
+        </param>
+        <check>len($const) == $vlen</check>
+        <check>$vlen &gt; 0</check>
+        <sink>
+                <name>in</name>
+                <type>$type</type>
+                <vlen>$vlen</vlen>
+        </sink>
+        <source>
+                <name>out</name>
+                <type>$type</type>
+                <vlen>$vlen</vlen>
+        </source>
 </block>

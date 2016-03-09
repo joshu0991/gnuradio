@@ -6,7 +6,7 @@
 ###################################################
  -->
 <block>
-	<name>Add Const</name>
+	<name>Add Const VXX</name>
 	<key>blocks_add_const_vxx</key>
 	<import>from gnuradio import blocks</import>
 	<make>blocks.add_const_v$(type.fcn)($const)</make>
